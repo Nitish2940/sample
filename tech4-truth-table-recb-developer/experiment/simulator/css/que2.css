@@ -1,0 +1,23 @@
+#demo{
+font-size:30px;
+text-align:right;
+color:red;
+}
+#div1 {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  margin:auto;
+  border: 5px solid black;
+  box-shadow:5px 5px;
+  border-radius:10px 10px 10px 10px;  
+}
+body{
+border-top:40px solid red;
+border-left:40px solid dodgerblue;
+border-right:40px solid springgreen;
+		border-bottom:40px solid yellow;
+		border-radius:50px;
+		 padding: auto;
+		 background-color:lightgrey;
+	}
