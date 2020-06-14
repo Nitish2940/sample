@@ -1,0 +1,202 @@
+
+<html>
+
+<head>
+    <style >
+     #box{ float:left;
+        position: fixed;
+        left:250px;
+        top:160px;}
+        #box2{position: fixed;
+        left:520px;
+        top:160px;}
+        #box3{position: fixed;
+        left:800px;
+        top:180px;}
+        #box4{position: fixed;
+        left:80px;
+        top:425px;}
+        #y{position: fixed;
+        left:700px;
+        top:500px;
+        color:#cc0000;
+        font-size:25px;}
+        #demo{color:#cc0000;
+        font-size:25px;
+        position: fixed;
+      left:700px;}
+        }
+
+
+        </style>
+    <body>
+        <canvas id="mycanvas"width="1000px"height="600px" style="background-color:#ccffff;border:2px solid black;box-shadow:20px 20px 10px 10px; "></canvas>
+            <script >
+                var canvas=document.getElementById('mycanvas');
+                var context=canvas.getContext('2d');
+
+                context.font="30px Arial";
+
+             context.fillText("Predict the step by step solution of given circuit",100,50);
+              context.beginPath();
+            
+           context.rect(20, 20, 900, 50);
+          context.stroke();
+              
+        context.font="15px Arial";
+             context.fillText("A=1",50,140);
+                context.moveTo(50,150);
+            context.lineTo(100, 150);
+            context.moveTo(50,180);
+            context.lineTo(100, 180);
+            context.font="15px Arial";
+             context.fillText("B=0",50,200);
+             context.strokeStyle = "black"
+                context.lineWidth = 3;
+            
+             context.stroke();
+             context.beginPath();
+context.arc(75, 165, 30, 1.6 * Math.PI, 0.4 * Math.PI);
+context.stroke();
+
+            context.moveTo(85,195);
+            context.lineTo(130, 195);
+            context.moveTo(85,135);
+            context.lineTo(130, 135);
+            
+            context.strokeStyle = "black"
+                context.lineWidth = 3;
+                context.stroke();
+                context.beginPath();
+            context.arc(130, 165, 30, 1.5 * Math.PI, 0.5 * Math.PI);
+context.stroke();
+context.moveTo(160,165);
+            context.lineTo(240, 165);
+            
+            context.strokeStyle = "black"
+                context.lineWidth = 3;
+                context.stroke();
+                context.font="15px Arial";
+             context.fillText("c=1",650,220);
+             context.strokeStyle = "black"
+                context.lineWidth = 3;
+             context.stroke();
+
+             context.moveTo(400,165);
+            context.lineTo(440, 165);
+            context.strokeStyle = "black";
+                context.lineWidth = 3;
+                context.stroke();
+                 context.moveTo(440,165);
+            context.lineTo(440, 190);
+            context.moveTo(440,165);
+            context.lineTo(440, 140);
+             context.lineTo(480, 165);
+              context.lineTo(440, 190);
+
+
+             context.strokeStyle = "black"
+                context.lineWidth = 3;
+               context.stroke();
+                context.beginPath();
+            context.arc(482, 165, 4, 0 * Math.PI, 2 * Math.PI);
+context.stroke();
+context.moveTo(485,165);
+            context.lineTo(520, 165);
+            context.lineTo(720, 165);
+            context.moveTo(680,205);
+            context.lineTo(720, 205);
+            context.moveTo(700,222);
+            context.lineTo(730, 222);
+            context.moveTo(696,145);
+            context.lineTo(730, 145);
+            
+           
+            context.strokeStyle = "black"
+                context.lineWidth = 3;
+               context.stroke();
+                context.beginPath();
+            context.arc(685, 185, 40, 1.6 * Math.PI, 0.4 * Math.PI);
+context.stroke();
+  context.beginPath();
+            context.arc(730, 195, 50, 1.5 * Math.PI, 1.91 * Math.PI);
+context.stroke();
+ context.beginPath();
+            context.arc(730, 172, 50, 0.04 * Math.PI, 0.5 * Math.PI);
+context.stroke();
+context.beginPath();
+            context.arc(782, 182, 4, 0 * Math.PI, 2 * Math.PI);
+context.stroke();
+ context.font="30px Arial";
+             context.fillText("Write the expression of the given circuit in the box below",100,350);
+              context.beginPath();
+            
+           context.rect(20, 310, 900, 50);
+          context.stroke();
+              
+
+
+             
+
+ 
+
+
+
+           
+</script>
+<div id="box">
+<form >
+  <input id="t1" list="name"placeholder="choose input"><br><br>  
+</form>
+<div id="box2">
+<form >
+  <input id="t2" list="name"placeholder="choose input"><br><br>  
+</form>
+<div id="box3">
+<form >
+  <input id="t3" list="name"placeholder="choose input"><br><br>  
+</form>
+<input  type="button" value="Submit"  onclick="fun();"/>
+<p id="demo"></p>
+<script>
+
+function fun()
+{ 
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+var c=parseInt(document.getElementById("t3").value);
+if(a===1&&b===0&&c===0) {
+                document.getElementById("demo").innerHTML="Congrats!!!  Right Answer";
+            }
+            else {
+                document.getElementById("demo").innerHTML="Try Again!!! Wrong Answer";
+            }
+        }    
+    </script>
+	<form id="box4">
+  <input type="text" id="t4" placeholder="write the expression" style="height:50px;width: 800px"><br><br>
+ <input  type="button" value="Submit"  onclick="fun1();"/>
+</form>
+	<script>
+	function fun1()
+{ 
+var z=document.getElementById("t4").value;
+if(z=='~((~A|B)|C)')
+{
+              var x = document.createElement("A");
+  var t = document.createTextNode("AA  CLICK TO NEXT QUESTION");
+  x.setAttribute("href","file:///C:/Users/Abhi/Desktop/Simulator/index.html");
+  x.appendChild(t);
+  document.body.appendChild(x);
+ 
+                document.getElementById("y").innerHTML="Congrats!!!  Right Answer";
+            }
+            else {
+                document.getElementById("y").innerHTML="Try Again!!! Wrong Answer";
+            }
+        }    
+    </script>
+	<p id="y"></p>
+    </body>
+</head>
+</html>

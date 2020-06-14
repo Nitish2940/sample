@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box{ height:50px;width:150px;background:#99FF00;
+font-size:20px;text-shadow:1px 1px 20px green;
+border:2px solid black;border-radius:5px 5px 5px 5px; 
+box-shadow:5px 5px 15px 2px black;
+transition-property:height;
+transition-duration:1s;
+border-top:40px solid red;
+		border-bottom:40px solid yellow;
+	
+}
+
+
+
+
+#box:hover{
+height:160px;
+}
+</style>
+    <title>Truth Table </title>
+    <script src="js/jquery-1.4.2.js"></script>
+    <script src="js/truth.js"></script>
+    <link rel="stylesheet" href="css/truth.css" type="text/css" media="screen" />
+</head>
+
+<body>
+    <div id="guide">
+        <h1>Use only given operators</h1>
+        <p>In order of decreasing precedence.</p>
+        <ul>
+            <li>
+                <strong>&amp;</strong>
+                -and -...eg...A&B
+            </li>
+            <li>
+                <strong>|</strong>
+               -or-...eg...A|B
+            </li>
+            <li>
+                <strong>^</strong>
+               -xor-...eg...A^B
+            </li>
+            <li>
+                <strong>~</strong>
+               -not-...eg...~A
+            </li>
+            <li>
+                <strong>!</strong>
+               -not-...eg...!A
+            </li>
+        </ul>
+    </div>
+    <div id="controls">
+        <h1>Enter a logic expression </h1>
+        <form id="theform">
+            <input type="text" id="expr">
+            
+        </form>
+
+        <h1>Truth Table</h1>
+        <div id="output">
+            <div id="nothing"></div>
+            <div id="combo"></div>
+            <div id="ast"></div>
+            <div id="sym"></div>
+        </div>
+    </div>
+    <script>
+        $(function() { truth.main(); });
+    </script><br><br><br>
+	<a href="index.html"/><button>NEXT</button></a>
+</body>
+</html>
